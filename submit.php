@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Form Submitted</title>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="output-box">
-    <h3>Registration Successful!</h3>
+<div class="container">
+    <h2>Submitted Details</h2>
 
-    <p><strong>Full Name:</strong> <?php echo $_POST["fullname"]; ?></p>
-    <p><strong>Email:</strong> <?php echo $_POST["email"]; ?></p>
-    <p><strong>Phone:</strong> <?php echo $_POST["phone"]; ?></p>
-    <p><strong>Gender:</strong> <?php echo $_POST["gender"]; ?></p>
-    <p><strong>Date of Birth:</strong> <?php echo $_POST["dob"]; ?></p>
-    <p><strong>Address:</strong> <?php echo nl2br($_POST["address"]); ?></p>
+    <?php
+        echo "<p><strong>Name:</strong> " . $_POST['name'] . "</p>";
+        echo "<p><strong>Email:</strong> " . $_POST['email'] . "</p>";
+        echo "<p><strong>Phone:</strong> " . $_POST['phone'] . "</p>";
+        echo "<p><strong>Course:</strong> " . $_POST['course'] . "</p>";
+        echo "<p><strong>Gender:</strong> " . $_POST['gender'] . "</p>";
+    ?>
 
-    <br>
-    <a href="index.html"><button>Go Back</button></a>
 </div>
 
 </body>
